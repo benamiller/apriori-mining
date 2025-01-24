@@ -1,4 +1,8 @@
 filename = "A-NUHa0sQ1C0nBpyRUTG5g_3260c54dad114a1a96af95bf746f9df1_categories.txt"
+part1 = "part1.txt"
+part2 = "part2.txt"
+
+MIN_SUPPORT = 771
 
 items = []
 item_to_support = {}
@@ -20,5 +24,12 @@ with open(filename, 'r') as file:
     print(min(item_to_support.values()))
     print(max(item_to_support.values()))
 
-for item, support in item_to_support.items():
+with open(part1, 'w') as file:
+    for item, support in item_to_support.items():
+        if support > MIN_SUPPORT:
+            file.write(f"{support}:{item}\n")
+
+with open(part2, 'w') as file:
+    for item, support
+    
 
